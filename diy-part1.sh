@@ -16,3 +16,4 @@
 # Add a feed source
 echo 'src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
 rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd*,miniupnpd-iptables,wireless-regdb}
+sed -i '/PKG_CONFIG_DEPENDS:=CONFIG_SMARTDNS_UI/a CONFIG_SMARTDNS_UI:=n' feeds/packages/net/smartdns/Makefile
